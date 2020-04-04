@@ -1,0 +1,150 @@
+.card_border_comp{
+  opacity: 0;
+  animation-delay: 0.3s !important;
+  //animation: apearCompCard 1s forwards  !important;
+
+ //@keyframes apearCompCard {
+ //  0%{
+ //    opacity: 0;
+ //    margin-left: 10px;
+ //  }
+ //  100%{
+ //    opacity: 1;
+ //    margin-left: 40px;
+ //  }
+ //}
+}
+
+.card_border{
+  width: 220px;
+  height: 320px;
+  background: rgba(255,255,255,0.7);
+  margin-left: 40px;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  @include box;
+  border-radius: 10px;
+  animation: apearCard 1s forwards ;
+
+  @keyframes apearCard {
+    0%{
+      opacity: 0;
+      margin-left: 10px;
+    }
+    100%{
+      opacity: 1;
+      margin-left: 40px;
+    }
+  }
+
+
+  @media screen and(max-width: 1440px) {
+    width: 170px;
+    height: 250px;
+    margin-left: 23px;
+  }
+  @media screen and(max-width: 1024px) {
+    width: 110px;
+    height: 170px;
+    margin-left: 30px;
+  }
+
+
+  .card {
+    border-radius: 10px;
+    margin-top: 5px;
+    width: 94%;
+    height: 95%;
+    border: 1px solid grey;
+    //background-image: url(../img/1.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+
+
+
+
+
+    .damage, .weight{
+      border: 1px solid white;
+      width: 25%;
+      height: 11%;
+      background: rgba(255,255,255, 0.5);
+      position: absolute;
+      border-radius: 5px;
+      font-size: 15px;
+      text-align: center;
+      line-height: 35px;
+      color: $color;
+      font-family: 'Audiowide';
+
+      @media screen and (max-width: 1440px){
+        line-height: 25px;
+      }
+      @media screen and (max-width: 1024px){
+        font-size: 10px;
+        line-height: 18px;
+      }
+
+    }
+
+    .weight{
+      bottom: 10px;
+      right: 5px;
+    }
+    .damage{
+      top: 10px;
+      left: 5px;
+    }
+  }
+}
+
+
+//// only for zip dy config ////
+//// =>
+
+//.card:nth-child(1){
+//  background-image: url(../img/1.jpg);
+//}
+//.card:nth-child(2){
+//  background-image: url(../img/2.jpg);
+//}.card:nth-child(3){
+//   background-image: url(../img/3.jpg);
+// }.card:nth-child(4){
+//    background-image: url(../img/4.jpg);
+//  }.card:nth-child(5){
+//     background-image: url(../img/5.jpg);
+//   }.card:nth-child(6){
+//      background-image: url(../img/6.jpg);
+//    }.card:nth-child(7){
+//       background-image: url(../img/7.jpg);
+//     }.card:nth-child(8){
+//        background-image: url(../img/8.jpg);
+//      }.card:nth-child(9){
+//         background-image: url(../img/9.jpg);
+//       }.card:nth-child(10){
+//          background-image: url(../img/10.jpg);
+//        }.card:nth-child(11){
+//           background-image: url(../img/11.jpg);
+//         }.card:nth-child(12){
+//            background-image: url(../img/12.jpg);
+//          }.card:nth-child(13){
+//             background-image: url(../img/13.jpg);
+//           }.card:nth-child(14){
+//              background-image: url(../img/14.jpg);
+//            }.card:nth-child(15){
+//               background-image: url(../img/15.jpg);
+//             }.card:nth-child(16){
+//                background-image: url(../img/16.jpg);
+//              }.card:nth-child(17){
+//                 background-image: url(../img/17.jpg);
+//               }.card:nth-child(18){
+//                  background-image: url(../img/18.jpg);
+//                }.card:nth-child(19){
+//                   background-image: url(../img/19.jpg);
+//                 }.card:nth-child(20){
+//                    background-image: url(../img/20.jpg);
+//                  }.card:nth-child(21){
+//                     background-image: url(../img/21.jpg);
+//                   }
