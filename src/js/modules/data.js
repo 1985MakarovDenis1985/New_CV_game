@@ -25,7 +25,6 @@ const cards = [
 
 
 export let mixedCard = [...cards];
-// mixCards();
 
 // export function mixCards(mixedCard) {
 //     function funMix(a,b) {
