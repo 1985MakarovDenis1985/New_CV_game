@@ -87,16 +87,13 @@ function comparisonDamage() {
 document.getElementById("btn_cover_before").addEventListener("click", (e) => {
     document.getElementById("pass_btn_wrap").style.opacity = "1";
     againButton.style.zIndex = "1";
-    passButton.style.zIndex = 100;
+    passButton.style.zIndex = "100";
 
     if (fellow.length <= 4) {
         createMyBox();
     }
 
-    if (comp.length < 2) {
-        createCompBox();
-
-    } else if (compWeight < 17 && comp.length >= 2) {
+    if (comp.length < 2 || compWeight < 17 && comp.length >= 2) {
         createCompBox();
     }
 
@@ -115,8 +112,7 @@ document.getElementById("btn_cover_before").addEventListener("click", (e) => {
 
     if (fellow.length == 5) {
         cardCompBlock.innerHTML = "";
-        passButton.style.zIndex = 1;
-
+        passButton.style.zIndex = "1";
         for (let i = 0; i < comp.length; i++) {
             cardCompBlock.appendChild(createCart.createCards(comp[i]))
         }
@@ -124,9 +120,9 @@ document.getElementById("btn_cover_before").addEventListener("click", (e) => {
         document.getElementById("wcdComp").innerHTML = "D: " + overallDamage(comp);
         document.getElementById("wcwComp").innerHTML = "W: " + overallWeight(comp);
         document.getElementById("btn_take_cards_again").style.zIndex = 1000;
-        againButton.style.zIndex = 100;
+        againButton.style.zIndex = "100";
         againButton.innerHTML = "Take card";
-        passButton.style.zIndex = 1;
+        passButton.style.zIndex = "1";
         // passButton.innerHTML = "";
     }
 });
@@ -181,18 +177,17 @@ function mixCards(mixedCard) {
     function funMix(a, b) {
         return Math.random() - 0.5;
     }
-
     return mixedCard.sort(funMix)
 }
 
-let playBtn = document.getElementById("btn_play_wrap").addEventListener("click", (e) => {
+document.getElementById("btn_play_wrap").addEventListener("click", (e) => {
     document.getElementById("game_panel").style.zIndex = "1000";
     document.getElementById("left_block").style.animationName = "apearLeftPannel";
     document.getElementById("btn_play_wrap").style.opacity = "0";
     document.getElementById("right_block").style.animation = "apearRightPannel 1s forwards";
 
     setTimeout(function () {
-        let arrAnimatiomMixCards = Array.from(document.getElementsByClassName("animation_mix_card")).map((el) => {
+        Array.from(document.getElementsByClassName("animation_mix_card")).map((el) => {
             el.style.animationName = "cardsMix";
         })
     }, 1000)
