@@ -184,6 +184,7 @@
     font-family: 'Audiowide';
     line-height: 21px;
     font-size: 14px;
+    z-index: 200;
 
     .button_disapear_game_description{
       width: 100px;
@@ -214,11 +215,12 @@
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+    z-index: 100;
+    border: 1px solid white;
 
   }
   .game_description_left{
     animation-name: game_description_left;
-    border: 10px solid white;
     left: 620px;
     border-right: none;
 
@@ -234,7 +236,6 @@
 
   .game_description_right{
     animation-name: game_description_right;
-    border: 10px solid white;
     right: 620px;
     border-left: none;
 
